@@ -24,7 +24,7 @@
             <i class="fa-regular fa-heart"></i>
             <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </header>
-            <main>
+        <main>
                 <h2>Kasse</h2>
                 
                 <section id="shopb">
@@ -61,8 +61,9 @@
 
                 <section id="personopp">
                     <h3>2.Dine opplysninger</h3>
-                        <form onsubmit="handleSubmit(event)">
+                    <form onsubmit="handleSubmit(event)">
                             <article>
+                                <h3>Leveringsadresse</h3>
                                     <label for="fname">Fornavn</label>
                                         <input type="text" placeholder="Nora" id="fname" name="fname" required>
 
@@ -77,9 +78,9 @@
 
                                     <label for="poststed">Poststed</label>
                                         <input type="text" placeholder="Halden" id="poststed" name="poststed" required>
-                                </article>
+                            </article>
 
-                                <article>
+                            <article>
                                     <h3>Kontaktinforamjon</h3>
                                     <label for="email">E-post</label>
                                         <input type="email" placeholder="nora.nordmann@gmail.com" id="email" name="email" required>
@@ -88,14 +89,15 @@
                             </article>
                                 <button type="submit">Lagre</button>
                                 <button type="reset">Avbryt</button>
-                        </form>
+                    </form>
                 </section>
 
+
                 <section id="levering">
-                    <form onsubmit="handleSubmit(event)">
+                <form onsubmit="handleSubmit(event)">
                             <h3>3.Levering</h3>
-                        <h4>Velg leveringsmetode</h4>
                             <article>
+                                <h4>Velg leveringsmetode</h4>
                                 <label for="transport1">Ekspress Hjemlevering</label>
                                     <input type="radio" id="transport1" name="transport" value="valg1" required> 59 kr <i class="fa-solid fa-truck"></i>
                                     <p>3-4 Virkedager</p>
@@ -106,20 +108,24 @@
                             </article>
 
                             <article>
+                                <h4>Velg leveringsmetode</h4>
                                 <label for="transport2">Ekspress Pakke til utleveringssted</label>
                                     <input type="radio" id="transport2" name="transport" value="valg2" required> 59 kr <i class="fa-brands fa-dhl"></i>
                                     <p>1-3 Virkedager</p>
                             </article>
 
                              <article>
+                                <h4>Velg leveringsmetode</h4>
                                 <label for="transport3">Standar Hjemlevering</label>
                                     <input type="radio" id="transport3" name="transport" value="valg3" required> Gratis <i class="fa-solid fa-box"></i>
                                     <p>5-8 Virkedager</p>
                                     <p>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
-                            </article>
+                             </article>
+                </form>
                 </section>
 
                 <section id="betaling">
+                <form onsubmit="handleSubmit(event)">
                         <h3>4.Betaling</h3>
                     <article>
                         <h4>Betal med kort <i class="fa-solid fa-credit-card"></i></h4>
@@ -128,13 +134,10 @@
                                     <input type="number" placeholder="342342****4435" id="kortnummer" name="kortnummer" min="1" required>
 
                                 <label for="utlopsdato">Utløpsdato</label>
-                                    <input type="date" placeholder="MM/ÅÅ" id="utlopsdato" name="utlopsdato" required >
+                                    <input type="date" id="utlopsdato" name="utlopsdato" required >
 
                                 <label for="cvv">CVC/CVV</label>
                                     <input type="number" placeholder="CVC/CVV" id="cvv" name="cvv" required>
-
-                        
-
                     </article>
                     <p>Å betale inkl. mva.</p>
                     <h4>1 199 kr</h4>
@@ -147,11 +150,10 @@
                             <input type="checkbox" id="boks" name="boks"> <p>Ja takk! Send nyhetsbrev til meg.</p>
                             
                         <label for="boks2"></label>
-                            <input type="checkbox" id="boks2" name="boks2"> <p>Jeg ønsker å motta tekstmeldinger med tilbud og nyheter</p>
+                          <input type="checkbox" id="boks2" name="boks2"> <p>Jeg ønsker å motta tekstmeldinger med tilbud og nyheter</p>
+                </form>
                 </section>
-                    </form>
-
-            </main>
+        </main>
     <footer id="footer-area">
         <section>
             <h2>Logo</h2>
@@ -190,7 +192,10 @@
             event.preventDefault(); // Forhindre standard innsending av skjemaet
             location.reload(); // Refresh siden
         // Brukte Ki for å få hjelp til å lage en funksjon i JS som refreshet siden etter submit.
-}
+        // Fikk også koden for <form onsubmit="handleSubmit(event)"> fra Ki.
+        // prompt1 "Jeg ønsker at knappen bare refresher siden og ikke noe annet. Svar kun med tekst (ikke kode)"
+        // prompt2 "Kunne du vist denne javascripten og ikke noe annet"
+        }
     </script>
 </body>
 </html>
