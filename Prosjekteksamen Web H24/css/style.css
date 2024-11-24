@@ -1,25 +1,180 @@
+
+*{
+    box-sizing: border-box;
+}
+
+
+h1{
+    font-size: 2rem;
+ }
+h2{
+    font-size: 1.8rem;
+    font-weight: bolder;
+ }
+h3{
+    font-size:1.6rem;
+ }
+h4{
+    font-size:1.4rem;
+ }
+p, a{font-size:1rem;}
+
+h2, h3, h4{
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 /* Header */
 
 #global-header{
-    background-color: #333;
-    color: white;
+    background-color: #ece2e2;
+    color: #fff;
     padding: 10px;
     text-align: center;
     margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 
+}
+#global-header input{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    display: inline-block;
+    left: 10px;
+}
+#global-header button{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    background-color: #fff;
+
+}
+
+#global-header a{
+    color: #000000;
+    text-decoration: none;
+    
+}
+#global-header a:hover{
+    color: #000000;
+    text-decoration: underline;
+
+}
+#global-header i{
+    color: #000000
 }
 #global-header li{
     display: inline;
     margin-right: 10px;
 }
 
+/*  Footer */
+
+
+#global-footer{
+    background-color: #fff;
+    border-top: #000000 1px solid;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    max-width: 100%;
+}
+#footerhead{
+    width: 100%;
+}
+#global-footer ul{
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
+/* #global-footer i{
+    font-family: Arial, Helvetica, sans-serif;
+} */
+#global-footer a{
+    color: #000000;
+    text-decoration: none;
+    
+}
+#global-footer a:hover{
+    color: #000000;
+    text-decoration: underline;
+
+}
+#global-footer ul{
+    list-style: none;
+    padding: 0;
+}
+#global-footer li{
+    display: inline;
+    margin-right: 10px;
+}
 
 
 
+/* Div på hovedinnhold i index */
 
+/* #container-index{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+    "banner banner banner"
+    "pop-prod pop-kat anmeld"
+    "footer footer footer";
+    margin: 20px;
+} */
+
+/* main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+} */
+main section{
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #797272;
+    align-items:center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 
 /* Seksjon 1 Hovedside */
+
+#banner{
+    background-color: #9e9090;
+}
+#banner a{
+    color: #000000;
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;  
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+#banner a:hover{
+    color: #ffffff;
+    background-color: #000000;
+}
 #banner img{
     width: 50%;
     height: 50%;
@@ -27,26 +182,130 @@
 }
 
 
+
+
 /* Seksjon 2 Hovedside */
+
+#pop-prod{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#pop-prod .prod-card{
+    margin-top: 10px;
+}
+
 #pop-prod img{
     width: 15%;
     height: 15%;
 }
-
-
+#pop-prod a{
+    color: #000000;
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 10px;  
+    margin-top: 20px;
+    font-weight: bold;
+    border: #000000 1px solid;
+    
+}
+#pop-prod a:hover{
+    color: #ffffff;
+    background-color: #000000;
+}
 
 /* Seksjon 3 Hovedside */
+
+#pop-kat h5{
+    width: 100%;
+    font-size: 1.2rem;
+}
+
 #pop-kat img{
-    width: 15%;
-    height: 15%;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    border: #000000 1px solid;
+    border-radius: 10px;
+}
+#pop-kat{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.pop-kat-pic{
+    position: relative;
+    display: inline-block;
+}
+.pop-kat-pic h4{
+    position: absolute;
+    color: #fff;
+    border-radius: 5px;
+    top:-34px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 
-/* Seksjon 4 Hovedside */
-#anmeld img{
-    width: 5%;
-    height: 5%;
 
+
+
+/* Seksjon 4 Hovedside */
+#anmeld{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+#anmeld h2{
+    width: 100%;
+    text-align: left;
+}
+
+.review-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: #000000 1px solid;
+    border-radius: 10px;
+    max-width: 400px;
+    max-height: 350px;
+    min-width: 400x;
+    min-height: 350px;
+    gap: 1rem;
+    margin: 10px;
+    padding: 10px;
+}
+
+#anmeld img{
+    min-width: 50px;
+    max-width: 150px;
+    max-height: 150px;
+    min-height: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+#anmeld ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
@@ -55,7 +314,6 @@
 .rating{
     list-style: none;
     padding: 0;
-    display: flex;
 }
 .rating li{
     margin-right: 5px;
@@ -70,7 +328,7 @@
 #breadcrumbs ul{
     list-style: none;
     padding: 0;
-    display: flex;
+
 }
 #breadcrumbs li{
     margin-right: 5px;
