@@ -143,8 +143,11 @@ main section{
     padding: 20px;
     border: 1px solid #797272;
     align-items:center;
-
     font-family: Arial, Helvetica, sans-serif;
+}
+main section button{
+    padding: 0px;
+    margin: 0px;
 }
 
 
@@ -185,13 +188,26 @@ main section{
     gap: 1rem;
 }
 
-
+/* <div> for å samle innholdet */
+#centercont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#centercont h2{
+    width: 100%;
+    text-align: center;
+}
+#centercont p{
+    width: 100%;
+    text-align: center;
+}
 
 .prod-card{
     border-radius: 10px;
-    max-width: 400px;
+    max-width: 300px;
     min-width: 200px;
-    padding: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -306,14 +322,10 @@ border-radius: 10px;
 .review-card{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     border: #000000 1px solid;
     border-radius: 10px;
-    max-width: 400px;
-    max-height: 350px;
-    min-height: 350px;
-    gap: 1rem;
-    margin: 10px;
+    max-width: 300px;
     padding: 10px;
 }
 
@@ -323,7 +335,7 @@ border-radius: 10px;
     max-height: 150px;
     min-height: 75px;
     height: 75px;
-    width: 100px;
+    width: 100%;
     border-radius: 50%;
 }
 #anmeld ul{
@@ -352,6 +364,9 @@ border-radius: 10px;
 
 /* Brødsmulesti */
 #breadcrumbs ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
     list-style: none;
     padding: 0;
 
@@ -362,15 +377,26 @@ border-radius: 10px;
 
 
 /* Seksjon 1 produktside */
-#produkt-info img{
-    width: 15%;
-    height: 15%;
+#produkt-info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
 }
-#produkt-info #mainimg {
+#produkt-info img{
     width: 25%;
     height: 25%;
 }
-
+#produkt-info #mainimg {
+    width: 35%;
+    height: 35%;
+}
+#picturegroup{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left ;
+    gap: 10px;
+}
 
 /* Seksjon 2 produktside */
 #lignende-prod img{
@@ -382,6 +408,16 @@ border-radius: 10px;
 
 
 /* Checkoutside */
+#main-checkout{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+#main-checkout h2{
+    width: 100%;
+    text-align: center;
+}
 img{
     width: 15%;
     height: 15%;
