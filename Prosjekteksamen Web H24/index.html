@@ -7,26 +7,33 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Hovedside</title>
 </head>
+<div id="grid-container">
+    <!-- Bruker div her for å gruppere og sentrere alt av innhold i sida-->
+    <!-- Spesielt da for å gjøre et skille mellom  -->
 <body>
     <header id="global-header">
-        <a href="index.html"><h1>Logo</h1></a>
-        <input type="search" placeholder="søk her" id="search">
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div id="searchbar">
+            <!-- Tar i bruk en div for å holde søkebaren bundet da den består av 2 deler  -->
+            <input type="search" placeholder="søk her" id="search">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Hjem</a></li>
                 <li><a href="#pop-prod">Produkter</a></li> 
+                <li><a href="index.html"><h1 id="logo">Logo</h1></a></li>
                 <li><a href="#pop-kat">Kategorier</a></li>
-                <li><a href="#global-footer">Kontakt Oss</a>
-
+                <li><a href="#global-footer">Kontakt Oss</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
                 <li><i class="fa-regular fa-user"></i></li>
                 <li><i class="fa-regular fa-heart"></i></li>
                 <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
         </nav>
-
     </header>
-    <div id="container-index">
         <main>
             <section id="banner">
                     <img src="bilder/Hoved_side/Lorem-picsum-ocean.jpg" alt="Bilde av steinstrand med sjø utover horisonten">
@@ -47,9 +54,9 @@
                     <button type="submit"><a href="#">Best Sellers</a></button>
                 </div>
                         <article class="prod-card">
-                            <img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese">
+                            <a href="product.html"><img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese"></a>
                             <!-- Bildet fra https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI -->
-                            <h4>Product name</h4>
+                            <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -61,9 +68,9 @@
                             </ul>
                         </article>
                         <article class="prod-card">
-                            <img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese">
+                            <a href="product.html"><img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese"></a>
                             <!-- Bildet fra https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI -->
-                            <h4>Product name</h4>
+                            <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -75,9 +82,9 @@
                             </ul>
                         </article>
                         <article class="prod-card">
-                            <img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese">
+                            <a href="product.html"><img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese"></a>
                             <!-- Bildet fra https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI -->
-                            <h4>Product name</h4>
+                            <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -89,9 +96,9 @@
                             </ul>
                         </article>
                         <article class="prod-card">
-                            <img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese">
+                            <a href="product.html"><img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese"></a>
                             <!-- Bildet fra https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI -->
-                            <h4>Product name</h4>
+                            <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -103,9 +110,9 @@
                             </ul>
                         </article>
                         <article class="prod-card">
-                            <img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese">
+                            <a href="product.html"><img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese"></a>
                             <!-- Bildet fra https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI -->
-                            <h4>Product name</h4>
+                            <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -117,9 +124,9 @@
                             </ul>
                         </article>
                         <article class="prod-card">
-                            <img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese">
+                            <a href="product.html"><img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese"></a>
                             <!-- Bildet fra https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI -->
-                            <h4>Product name</h4>
+                            <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
                                 <li><i class="fa-solid fa-star"></i></li>
@@ -130,6 +137,7 @@
                                 <li>842 Reviews</li>
                             </ul>
                         </article>
+                        
                     
 
             </section>
@@ -137,36 +145,39 @@
             <section id="pop-kat">
                     <h2>Våre mest populære kategorier</h2>
                     <h5>Oppdag det beste av det beste</h5>
+                <div id="fancypics">
+                    <!-- Bruker div her for å lettere kontrollere de forskjellige bildene og størrrelsene deres -->
 
-                    <article class="pop-kat-pic">
+                    <article id="kat1" class="pop-kat-pic">
                             <h4>Category 1</h4>
-                            <img src="bilder/Hoved_side/Threeguys.jpg" alt="Bilde av tre menn som har åpnet dør til mørkt rom">
+                            <img id="kat-img1" src="bilder/Hoved_side/Threeguys.jpg" alt="Bilde av tre menn som har åpnet dør til mørkt rom"></a> 
                             <!-- Bildet fra https://fastly.picsum.photos/id/209/1920/1280.jpg?hmac=VkEKEKhTEKOSFL4n-N4aLnbGGpV5hxuCs2tx_ny4y5g -->
                     </article>
 
-                    <article class="pop-kat-pic">
+                    <article id="kat2" class="pop-kat-pic">
                             <h4>Category 2</h4>
-                            <img src="bilder/Hoved_side/Harbor.jpg" alt="Bilde av storker på en brygge">
+                            <img id="kat-img2" src="bilder/Hoved_side/Harbor.jpg" alt="Bilde av storker på en brygge">
                             <!-- Bildet fra https://fastly.picsum.photos/id/244/4288/2848.jpg?hmac=R6j9PBP4aBk2vcEIoOPU4R_nuknizryn2Vq8GGtWTrM -->
                     </article>
 
-                    <article class="pop-kat-pic">
+                    <article id="kat3" class="pop-kat-pic">
                             <h4>Category 3</h4>
-                            <img src="bilder/Hoved_side/Birds.jpg" alt="Bilde av fugler i himmelen">
+                            <img id="kat-img3" src="bilder/Hoved_side/Birds.jpg" alt="Bilde av fugler i himmelen">
                             <!-- Bildet fra https://fastly.picsum.photos/id/258/4608/3072.jpg?hmac=9JDdAUW9UW7NRF3l4D2IOVQ76bw1hMxcnoLdQvwLxjA -->
                     </article>
 
-                    <article class="pop-kat-pic">
+                    <article id="kat4" class="pop-kat-pic">
                             <h4>Category 4</h4>
-                            <img src="bilder/Hoved_side/Cowbeach.jpg" alt="Bilde av ku på strand">
+                            <img id="kat-img4" src="bilder/Hoved_side/Cowbeach.jpg" alt="Bilde av ku på strand">
                             <!-- Bildet fra https://fastly.picsum.photos/id/200/1920/1280.jpg?hmac=-eKjMC8-UrbLMpy1A4OWrK0feVPB3Ka5KNOGibQzpRU -->
                     </article>
 
-                    <article class="pop-kat-pic">
+                    <article id="kat5" class="pop-kat-pic">
                          <h4>Category 5</h4>
-                         <img src="bilder/Hoved_side/Railway.jpg" alt="Bilde av togskinner som går inn mot storby">
+                         <img id="kat-img5" src="bilder/Hoved_side/Railway.jpg" alt="Bilde av togskinner som går inn mot storby">
                          <!-- Bildet fra https://fastly.picsum.photos/id/242/1891/1280.jpg?hmac=EhMqQfJIQi3yk8-7sjY4pdtCJyONM1X0bYXEhhALwJY -->
                     </article>
+                </div>
                    
                         
 
@@ -235,17 +246,14 @@
                                 Donec neque enim, fringilla vel sagittis eu, tincidunt quis orci. Praesent at rhoncus nunc. 
                                 Praesent rutrum ornare massa vel tincidunt. Suspendisse rutrum vitae augue ut finibus. </p>
                         </article>
-                        
-
             </section>
         </main>
-    </div>
-    <footer id="global-footer">
+        <footer id="global-footer">
             <section id="footerhead">
                     <h2>Logo</h2>
                     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p> 
             </section>
-            <section>
+            <section id="kontaktinfo">
                     <h3>Kontakt</h3>
                         <ul>
                             <li><i class="fa-solid fa-location-dot"></i>Adresse: B R A Veien 4, 1783 Halden</li>
@@ -255,12 +263,13 @@
 
                         </ul>
             </section>
-            <section>
+            <section id="snarvei-list">
                     <h3>Snarveier</h3>
                     <ul>
                         <li><a href="#pop-prod">Produkter</a></li>
                         <li><a href="#pop-kat">Kategorier</a></li>
                         <li>Kontakt oss</li>
+                        <li><a href="#"> Tilgjengelighetserklæring</a></li>
                     </ul>
             </section>
             <section>
@@ -273,6 +282,7 @@
                     </ul>
 
             </section>
-    </footer>
-</body>
+        </footer>
+        </div>
+    </body>
 </html>

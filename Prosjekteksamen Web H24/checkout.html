@@ -7,22 +7,32 @@
         <link rel="stylesheet" href="css/style.css">
         <title>Kasseside</title>
     </head>
+    <div id="grid-container">
+        <!-- Bruker div her for å gruppere og sentrere alt av innhold i sida-->
+        <!-- Spesielt da for å gjøre et skille mellom  -->
     <body>
         <header id="global-header">
-            <a href="index.html"><h1>Logo</h1></a>
-            <input type="search" placeholder="søk her" id="search">
-            <input type="submit" value="Søk">
+            <div id="searchbar">
+                <!-- Tar i bruk en div for å holde søkebaren bundet da den består av 2 deler  -->
+                <input type="search" placeholder="søk her" id="search">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="index.html#pop-prod">Produkter</a></li> 
-                    <li><a href="index.html#pop-prod">Kategorier</a></li>
-                    <li><a href="#global-footer">Kontakt Oss</a>
+                    <li><a href="#pop-prod">Produkter</a></li> 
+                    <li><a href="index.html"><h1 id="logo">Logo</h1></a></li>
+                    <li><a href="#pop-kat">Kategorier</a></li>
+                    <li><a href="#global-footer">Kontakt Oss</a></li>
                 </ul>
             </nav>
-            <i class="fa-regular fa-user"></i>
-            <i class="fa-regular fa-heart"></i>
-            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <nav>
+                <ul>
+                    <li><i class="fa-regular fa-user"></i></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
         </header>
         <main id="main-checkout">
                 <h2>Kasse</h2>
@@ -155,39 +165,41 @@
                 </form>
                 </section>
         </main>
-    <footer id="global-footer">
-        <section>
-            <h2>Logo</h2>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p> 
-        </section>
-        <section>
-            <h3>Kontakt</h3>
-            <i class="fa-solid fa-location-dot">Adresse: B R A Veien 4, 1783 Halden</i>
-            <h3>Telefon</h3>
-            <i class="fa-solid fa-phone">69 60 80 00</i>
-            <h3>E-post</h3>
-            <i class="fa-solid fa-envelope">E-post: halden@hiof.no</i>
-            <h3>Åpningstider</h3>
-            <i class="fa-solid fa-clock">Åpningstider: Stenger 15:00</i>'
-        </section>
-        <section>
-            <h3>Snarveier</h3>
-             <ul>
-                <li>Produkter</li>
-                <li>Kategorier</li>
-                <li>Kontakt oss</li>
-            </ul>
-        </section>
-        <section>
-            <h3>Sosiale medier</h3>
-             <ul>
-                <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="https://www.lindkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://www.pininterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
-             </ul>
-        </section>
-    </footer>
+        <footer id="global-footer">
+            <section id="footerhead">
+                    <h2>Logo</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p> 
+            </section>
+            <section id="kontaktinfo">
+                    <h3>Kontakt</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i>Adresse: B R A Veien 4, 1783 Halden</li>
+                            <li><i class="fa-solid fa-phone"></i>Telefon: 69 60 80 00</li>
+                            <li><i class="fa-solid fa-envelope"></i>E-post: halden@hiof.no</li>
+                            <li><i class="fa-solid fa-clock"></i>Åpningstider: Stenger 15:00</li>  
+
+                        </ul>
+            </section>
+            <section id="snarvei-list">
+                    <h3>Snarveier</h3>
+                    <ul>
+                        <li><a href="#pop-prod">Produkter</a></li>
+                        <li><a href="#pop-kat">Kategorier</a></li>
+                        <li>Kontakt oss</li>
+                        <li><a href="#"> Tilgjengelighetserklæring</a></li>
+                    </ul>
+            </section>
+            <section>
+                    <h3>Sosiale medier</h3>
+                    <ul>
+                        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://www.lindkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="https://www.pininterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
+                    </ul>
+
+            </section>
+        </footer>
     <script>
         function handleSubmit(event) {
             event.preventDefault(); // Forhindre standard innsending av skjemaet
@@ -198,5 +210,6 @@
         // prompt2 "Kunne du vist denne javascripten og ikke noe annet"
         }
     </script>
+    </div>
 </body>
 </html>

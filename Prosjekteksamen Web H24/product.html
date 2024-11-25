@@ -7,22 +7,32 @@
         <link rel="stylesheet" href="css/style.css">
         <title>Produktside</title>
     </head>
+    <div id="grid-container">
+        <!-- Bruker div her for å gruppere og sentrere alt av innhold i sida-->
+        <!-- Spesielt da for å gjøre et skille mellom  -->
     <body>
         <header id="global-header">
-            <a href="index.html"><h1>Logo</h1></a>
-            <input type="search" placeholder="søk her" id="search">
-            <input type="submit" value="Søk">
+            <div id="searchbar">
+                <!-- Tar i bruk en div for å holde søkebaren bundet da den består av 2 deler  -->
+                <input type="search" placeholder="søk her" id="search">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="index.html#pop-prod">Produkter</a></li> 
-                    <li><a href="index.html#pop-prod">Kategorier</a></li>
-                    <li><a href="#global-footer">Kontakt Oss</a>
+                    <li><a href="#pop-prod">Produkter</a></li> 
+                    <li><a href="index.html"><h1 id="logo">Logo</h1></a></li>
+                    <li><a href="#pop-kat">Kategorier</a></li>
+                    <li><a href="#global-footer">Kontakt Oss</a></li>
                 </ul>
             </nav>
-            <i class="fa-regular fa-user"></i>
-            <i class="fa-regular fa-heart"></i>
-            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <nav>
+                <ul>
+                    <li><i class="fa-regular fa-user"></i></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
         </header>
             <main id="main-content">
                 <nav id="breadcrumbs">
@@ -34,24 +44,35 @@
                         <li>Produktnavn</li>
                     </ul>
                 </nav>
-                <section id="produkt-info">
-                    <article id="picturegroup">   
+                <div id="grid-container-produktinfo">
+                <section id="prod-pic">
+                    <article id="pic1">   
                         <img src="bilder/Produkt_side/Produkt.jpg" alt="Bildet av en person som står ute med jakke og lue">
-                        <!-- Bildet fra https://fastly.picsum.photos/id/669/4869/3456.jpg?hmac=g-4rQWsPdHoLi5g6ahHlvjKubSQzR-D9m7-WtblbmyM -->
-                        <img src="bilder/Produkt_side/Produkt.jpg" alt="Bildet av en person som står ute med jakke og lue">
-                        <!-- Bildet fra https://fastly.picsum.photos/id/669/4869/3456.jpg?hmac=g-4rQWsPdHoLi5g6ahHlvjKubSQzR-D9m7-WtblbmyM -->
-                        <img src="bilder/Produkt_side/Produkt.jpg" alt="Bildet av en person som står ute med jakke og lue">
-                        <!-- Bildet fra https://fastly.picsum.photos/id/669/4869/3456.jpg?hmac=g-4rQWsPdHoLi5g6ahHlvjKubSQzR-D9m7-WtblbmyM -->
-                        <img id="mainimg" src="bilder/Produkt_side/Produkt.jpg" alt="Bildet av en person som står ute med jakke og lue">
                         <!-- Bildet fra https://fastly.picsum.photos/id/669/4869/3456.jpg?hmac=g-4rQWsPdHoLi5g6ahHlvjKubSQzR-D9m7-WtblbmyM -->
                     </article>
-
+                    <article id="pic2">
+                        <img src="bilder/Produkt_side/Produkt.jpg" alt="Bildet av en person som står ute med jakke og lue">
+                        <!-- Bildet fra https://fastly.picsum.photos/id/669/4869/3456.jpg?hmac=g-4rQWsPdHoLi5g6ahHlvjKubSQzR-D9m7-WtblbmyM -->
+                    </article>
+                    <article id="pic3">
+                        <img src="bilder/Produkt_side/Produkt.jpg" alt="Bildet av en person som står ute med jakke og lue">
+                        <!-- Bildet fra https://fastly.picsum.photos/id/669/4869/3456.jpg?hmac=g-4rQWsPdHoLi5g6ahHlvjKubSQzR-D9m7-WtblbmyM -->
+                    </article>
+                    <article id="pic4">
+                        <img src="bilder/Produkt_side/Produkt.jpg" alt="Bildet av en person som står ute med jakke og lue">
+                        <!-- Bildet fra https://fastly.picsum.photos/id/669/4869/3456.jpg?hmac=g-4rQWsPdHoLi5g6ahHlvjKubSQzR-D9m7-WtblbmyM -->
+                    </article>
+                </section>
+                <section id="prodaside">
                     <aside>
                         <article>
                             <h3>Produktnavn</h3>
                             <p><a href="#">MERKENAVN</a></p>
                             <p>Kr 5195 inkl. mva.</p>
-                            <p>Farge: brun</p>
+                            <ul>
+                                <li>Farge:</li>
+                                <li id="prodcol">beige</li> 
+                            </ul>
                                 <form onsubmit="handleSubmit(event)">
                                     <label for="size">Størrelse</label>
                                         <select name="size" id="size" required>
@@ -61,18 +82,18 @@
                                             <option value="large">Large</option>
                                         </select>
                                         <button type="submit">Legg i handlekurv</button>
-                                        <button type="submit">Legg til i ønskeliste<i class="fa-regular fa-heart"></i></button>
+                                        <button type="submit"><i class="fa-regular fa-heart"></i></button>
                                 </form>
                         </article>
-                        <article>
+                        <article id="prod-det">
                             <h4>Materiale og vedlikehold <i class="fa-solid fa-plus"></i></h4>
 
                             <h4>Produktdetaljer <i class="fa-solid fa-plus"></i></h4>
 
                             <h4>Størrelsetabell <i class="fa-solid fa-plus"></i></h4>
 
-                            <p>Anmeldelser</p>
                                 <ul class="rating">
+                                    <li><p>Anmeldelser</p></li>
                                     <li><i class="fa-solid fa-star"></i></li>
                                     <li><i class="fa-solid fa-star"></i></li>
                                     <li><i class="fa-solid fa-star"></i></li>
@@ -83,14 +104,28 @@
                         </article>
                     </aside>
                 </section>
-
+                </div>
                 <section id="lignende-prod">
                     <h3>Lignende produkter</h3>
-                    <a href="#">Se lignende produkter <i class="fa-solid fa-arrow-right"></i></a>
-                    <article>
+                    <a href="#" id="headerlink">Se lignende produkter <i class="fa-solid fa-arrow-right"></i></a>
+                    <article class="prod-card">
                         <img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene">
                         <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
-                        <h4>Product name</h4>
+                        <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
+                            <p>Kr 1999</p>
+                            <ul class="rating">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li>842 Reviews</li>
+                            </ul>
+                    </article>
+                    <article class="prod-card">
+                        <img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene">
+                        <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
+                        <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                         <p>Kr 1999</p>
                         <ul class="rating">
                             <li><i class="fa-solid fa-star"></i></li>
@@ -98,47 +133,90 @@
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-solid fa-star"></i></li>
                             <li><i class="fa-regular fa-star"></i></li>
+                            <li>842 Reviews</li>
                         </ul>
-                        <p>842 Reviews</p>
+                    </article>
+                    <article class="prod-card">
+                        <img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene">
+                        <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
+                        <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
+                            <p>Kr 1999</p>
+                            <ul class="rating">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li>842 Reviews</li>
+                            </ul>
+                    </article>
+                    <article class="prod-card">
+                        <img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene">
+                        <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
+                        <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
+                            <p>Kr 1999</p>
+                            <ul class="rating">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li>842 Reviews</li>
+                            </ul>
+                    </article>
+                    <article class="prod-card">
+                        <img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene">
+                        <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
+                        <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
+                            <p>Kr 1999</p>
+                            <ul class="rating">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li>842 Reviews</li>
+                            </ul>
                     </article>
                 </section>
 
             </main>
     
-        <footer id="global-footer">
-            <section>
-                <h2>Logo</h2>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.></p> 
-            </section>
-            <section>
-                <h3>Kontakt</h3>
-                <i class="fa-solid fa-location-dot">Adresse: B R A Veien 4, 1783 Halden</i>
-                <h3>Telefon</h3>
-                <i class="fa-solid fa-phone">69 60 80 00</i>
-                <h3>E-post</h3>
-                <i class="fa-solid fa-envelope">E-post: halden@hiof.no</i>
-                <h3>Åpningstider</h3>
-                <i class="fa-solid fa-clock">Åpningstider: Stenger 15:00</i>'
-            </section>
-            <section>
-                <h3>Snarveier</h3>
-                 <ul>
-                    <li>Produkter</li>
-                    <li>Kategorier</li>
-                    <li>Kontakt oss</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Sosiale medier</h3>
-                 <ul>
-                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://www.lindkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://www.pininterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
-                 </ul>
+            <footer id="global-footer">
+                <section id="footerhead">
+                        <h2>Logo</h2>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p> 
+                </section>
+                <section id="kontaktinfo">
+                        <h3>Kontakt</h3>
+                            <ul>
+                                <li><i class="fa-solid fa-location-dot"></i>Adresse: B R A Veien 4, 1783 Halden</li>
+                                <li><i class="fa-solid fa-phone"></i>Telefon: 69 60 80 00</li>
+                                <li><i class="fa-solid fa-envelope"></i>E-post: halden@hiof.no</li>
+                                <li><i class="fa-solid fa-clock"></i>Åpningstider: Stenger 15:00</li>  
     
-            </section>
-        </footer>
+                            </ul>
+                </section>
+                <section id="snarvei-list">
+                        <h3>Snarveier</h3>
+                        <ul>
+                            <li><a href="#pop-prod">Produkter</a></li>
+                            <li><a href="#pop-kat">Kategorier</a></li>
+                            <li>Kontakt oss</li>
+                            <li><a href="#"> Tilgjengelighetserklæring</a></li>
+                        </ul>
+                </section>
+                <section>
+                        <h3>Sosiale medier</h3>
+                        <ul>
+                            <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="https://www.lindkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href="https://www.pininterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
+                        </ul>
+    
+                </section>
+            </footer>
         <script>
             function handleSubmit(event) {
                 event.preventDefault(); // Forhindre standard innsending av skjemaet
@@ -149,5 +227,6 @@
             // prompt2 "Kunne du vist denne javascripten og ikke noe annet"
             }
         </script>
+        </div>
     </body>
 </html>
