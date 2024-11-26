@@ -34,9 +34,16 @@ h2, h3, h4{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto, auto, auto, auto;
+        /* align-items: center;
+        text-align: center; */
     }
     #global-header{
         text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     #searchbar{
         text-align: center;
@@ -49,11 +56,7 @@ h2, h3, h4{
             margin-left: 175px;
             margin-top: 2px;
         }
-    }
-    li{
-        text-align: center;
-        align-self: center;
-    }
+
     ul{
         display: flex;
         flex-wrap: wrap;
@@ -78,10 +81,20 @@ h2, h3, h4{
     #fancypics article{
         display: grid;
     }
+    #global-footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+    }
+}
+
     
 
 /* Desktop */
-@media screen and (max-width: 1200px){
+@media screen and (min-width: 800px) and (max-width: 1200px){
 
     #grid-container{
         display: grid;
@@ -145,6 +158,10 @@ h2, h3, h4{
 
 }
 
+/* Tablet grid i hovedsiden */
+@media screen and (max-width: 1000px) and (min-width:800px){
+
+}
 
 
 
@@ -313,7 +330,7 @@ main section button{
 #pop-prod{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -463,7 +480,7 @@ main section button{
 #anmeld{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     gap: 10px;
     width: 100%;
 }
@@ -482,9 +499,10 @@ main section button{
     padding: 10px;
 }
 
+
 #anmeld img{
     min-width: 50px;
-    max-width: 150px;
+    max-width: 100px;
     max-height: 150px;
     min-height: 75px;
     height: 75px;
@@ -520,8 +538,6 @@ main section button{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 10px;
-    margin: 20px;
 }
 #grid-container-produktinfo img{
     width: 650px;
@@ -589,6 +605,9 @@ main section button{
     width: 25%;
     height: 25%;
 }
+#prod-pic{
+    max-width: 700px;
+}
 
 /* Seksjon 2 produktside */
 #prodaside{
@@ -596,7 +615,7 @@ main section button{
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    width: 100%;
+    max-width: 440px;
 }
 #prodaside a{
     color: #000000;
@@ -618,6 +637,7 @@ main section button{
 #lignende-prod h3{
     width: 75%;
 }
+
 #headerlink{
     width: 24%;
     text-align: right;
@@ -650,41 +670,256 @@ main section button{
 }
 
 /* Checkoutside */
-#main-checkout{
+
+#flex-center-cont{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+}
+#back-to-page ul{
+    list-style: none;
+    color: #000000;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+}
+#back-to-page a{
+    text-decoration: none;
+    color: #000000;
+}
+#product-name{
+    font-weight: bold
+}
+
+#main-checkout{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px;
+}
+#main-checkout section{
+    border: #d5cfcf 0.5px solid;
+    border-radius: 10px;
+    padding: 10px;
 }
 #main-checkout h2{
     width: 100%;
     text-align: center;
 }
 
-
-
-/* Kasse tabell */
-#kassse-tab {
-    border-collapse: collapse;
-    width: 100%;
-    border: none;
-}
-#kasse-tab td li{
-    list-style: none;
-}
-#kasse-tab img{
-    width: 300px;
-    height: 200px;
-}
-.flex-row{
-    display: flex;
-    align-items: center;
-}
-.flex-row td{
-    margin-right: 10px;
+#shopb{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    padding: 2px 10px 2px 10px;
+    justify-content: center;
     gap: 10px;
+    width: 100%;
+}
+#shopb h3{
+    width: 100%;
+}
+#shopb img{
+    max-width: 250px;
+}
+#checkinfo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+#checkinfo ul{
+    list-style: none;
+    display: block;
+    padding: 1rem;
+    align-content: center;
+    height: 10%;
+}
+#checkinfo ul li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 10px;
+}
+#checkinfo article ul li i{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Opplysning skjema */
+#personopp{
+    width: 100%;
+}
+
+#personopp article{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    flex-direction: column;
+}
+#biggrid{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
+#biggergrid{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+#epost-grid{
+    grid-column: 1/4;
+    grid-row: 1/2;   
+}
+#tlf-grid{
+    grid-column: 1/4;
+    grid-row: 2/2;
+}
+
+#personopp label{
+    display: contents;
+}
+#personopp label input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#personopp li button{
+    width: 100%;
+    background-color: #797272;
+    color: #ffffff;
+    padding: 10px;
+
+}
+#longin{
+    grid-row: 2/2;
+    grid-column: 1/3;
+}
+#shortin{
+    align-content: end;
+}
+#save-but{
+    grid-column: 1/4;
+    grid-row: 3/4;
+}
+#cancel-but{
+    margin-top: 50px;
+    text-align: center;
+    grid-column: 2 / 2;
+    grid-row: 3 / 4;
+}
+
+#oppskjema{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    flex-direction: column;
+}
+#oppskjema input{
+    width: 50%;
+}
+#handlinger{
+    text-align: center;
+}
+
+
+
+
+/* Levering skjema */
+#levering article{
+    border: #000000 1px solid;
+    width: 100%;
+}
+#leveringalt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#leveringalt label{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 210px;
+}
+#leveringalt h4{
+    font-size: 1rem;
+}
+#boldgrey{
+    font-weight: bold;
+    color: #9e9090;
+    margin-block: 0px;
+}
+#filltext{
+    width: 100%;
+}
+
+/* Betaling skjema */
+
+#cardinfo{
+    border-bottom: #dbcbcb 0.5px solid;
+}
+#smallgrid{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+#smallgrid input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#shortin2{
+    grid-column: 1/2;
+    grid-row: 2/2;
+}
+#longin2{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+#longin2{
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+#betaling button{
+    width: 100%;
+    background-color: #797272;
+    color: #ffffff;
+    padding: 10px;
+}
+#boldblack{
+    font-weight: bold;
+    color: #000000;
+    margin-block: 0px;
+    font-size: 23px;
+}
+#centerbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+#centerbox p{
+    width: 100%;
+    text-align: center;
+}
+#centerbox ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#centerbox li{
+    align-content: center;
 }
