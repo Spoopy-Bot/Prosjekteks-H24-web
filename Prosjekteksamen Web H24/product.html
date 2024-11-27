@@ -69,28 +69,39 @@
                             <h3>Produktnavn</h3>
                             <p><a href="#">MERKENAVN</a></p>
                             <p>Kr 5195 inkl. mva.</p>
-                            <ul>
-                                <li>Farge:</li>
-                                <li id="prodcol">beige</li> 
+                            <ul class="rating">
+                                <li>Farge: </li>
+                                <li id="prodcol"> beige</li> 
                             </ul>
-                                <form onsubmit="handleSubmit(event)">
-                                    <label for="size"></label>
+                                <form id="smallform" onsubmit="handleSubmit(event)">
+                                    <label for="size">
                                         <select name="size" id="size" required>
+                                            <p>Størrelse</p>
                                             <option value="" disabled selected>Velg størrelse</option>
                                             <option value="small">Small</option>
                                             <option value="medium">Medium</option>
                                             <option value="large">Large</option>
                                         </select>
-                                        <button type="submit">Legg i handlekurv</button>
-                                        <button type="submit"><i class="fa-regular fa-heart"></i></button>
+                                    </label>
+                                        <button id="but1" type="submit">Legg i handlekurv</button>
+                                        <button id="but2" type="submit"><i class="fa-regular fa-heart"></i></button>
                                 </form>
                         </article>
                         <article id="prod-det">
-                            <h4>Materiale og vedlikehold <i class="fa-solid fa-plus"></i></h4>
+                            <ul class="dropdown">
+                                <li><h4>Materiale og vedlikehold</h4></li>
+                                <li><i class="fa-solid fa-plus"></i></li>
+                            </ul>
 
-                            <h4>Produktdetaljer <i class="fa-solid fa-plus"></i></h4>
+                            <ul class="dropdown">
+                                <li><h4>Produktdetaljer</h4></li>
+                                <li><i class="fa-solid fa-plus"></i></li>
+                            </ul>
 
-                            <h4>Størrelsetabell <i class="fa-solid fa-plus"></i></h4>
+                            <ul class="dropdown">
+                                <li><h4>Størrelsetabell</h4></li>
+                                <li><i class="fa-solid fa-plus"></i></li>
+                            </ul>
 
                                 <ul class="rating">
                                     <li><p>Anmeldelser</p></li>
@@ -107,10 +118,13 @@
                 </div>
                 <section id="lignende-prod">
                     <h3>Lignende produkter</h3>
-                    <a href="#" id="headerlink">Se lignende produkter <i class="fa-solid fa-arrow-right"></i></a>
+                    <h4><a href="#" id="headerlink">Se lignende produkter <i class="fa-solid fa-arrow-right"></i></a></h4>
+                    <div id="flex-container-ligende-prod">
+                        <!-- Setter opp en div-tag for å legge alle artiklene i en flexbox med i rad-retning -->
                     <article class="prod-card">
                         <img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene">
                         <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
+                        <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></i></button>
                         <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -125,6 +139,7 @@
                     <article class="prod-card">
                         <img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene">
                         <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
+                        <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></i></button>
                         <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                         <p>Kr 1999</p>
                         <ul class="rating">
@@ -139,6 +154,7 @@
                     <article class="prod-card">
                         <img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene">
                         <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
+                        <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></i></button>
                         <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -153,6 +169,7 @@
                     <article class="prod-card">
                         <img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene">
                         <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
+                        <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></i></button>
                         <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -167,6 +184,7 @@
                     <article class="prod-card">
                         <img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene">
                         <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
+                        <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></i></button>
                         <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -178,6 +196,7 @@
                                 <li>842 Reviews</li>
                             </ul>
                     </article>
+                </div>
                 </section>
 
             </main>
