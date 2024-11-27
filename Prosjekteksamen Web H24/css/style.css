@@ -77,14 +77,16 @@ h2, h3, h4{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 10px;
+        max-width: 500px;
     }
-    #fancypics article{
-        display: grid;
-    }
-    #fancypics article img{
+    #fancypics img{
         width: 100%;
-        max-width: 200px;
-        border-radius: 20px;
+        height: 100%;
+        
+    }
+    #kat1, #kat2, #kat3, #kat4{
+        width: 100%;
+        height: 100%;
     }
     #global-footer{
         display: flex;
@@ -99,12 +101,17 @@ h2, h3, h4{
     
 
 /* Desktop */
-@media screen and (min-width: 800px) and (max-width: 1200px){
+@media screen and (min-width: 1000px) {
 
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     #grid-container{
         display: grid;
         max-width: 1200px;
-        grid-template-columns: 0.25fr 3fr 0.25fr; 
+        grid-template-columns: 1fr 6fr 1fr; 
         grid-template-rows: auto, auto, auto, auto;
     }
     #global-header{
@@ -141,6 +148,40 @@ h2, h3, h4{
             flex-wrap: wrap;
             justify-content: left;
         }
+
+    #rightbut, #leftbut{
+        padding: 10px;
+        height: 37px;
+        width: 37px;
+        border-radius: 50%;
+        position: absolute;
+        top: 57%;
+        left: 50%;
+    }
+    #leftbut{
+        left: 10px
+    }
+    #rightbut{   
+        right: 10px;    
+    }
+    #bannercard{
+        position: relative;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    #bannercard img{  
+        width: 100%;
+        max-width: 1000px;
+        max-height: 500px;
+        position: absolute;
+    }
+    #bannertext{
+        top: 25%;
+        position: absolute;
+        max-width: 331px;
+        left: 50%;
+        text-align: right;
+    }
     #snarvei-list{
         display: flex;
         flex-wrap: wrap;
@@ -149,26 +190,123 @@ h2, h3, h4{
     #fancypics{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         gap: 10px;
     }
+    #kat3{
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+    }
+    #kat4{
+        grid-column: 1 / 3;
+        grid-row: 2 / 4;
+    }
+
+}
     #fancypics article{
         display: grid;
         align-items: end;
     }
-    #kat3{
-        grid-column: 3/4;
-        grid-row: 1/2;;
-    }
-    /* #kat4{
-        grid-column: 1/3;
-        grid-row: 2/3;
-    } */
+    
 
-}
 
+/*  Samme som desktop, bortsett fra #fancypics */
 /* Tablet grid i hovedsiden */
-@media screen and (max-width: 1000px) and (min-width:800px){
+@media screen and (min-width:800px) and (max-width: 1000px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #grid-container{
+        display: grid;
+        max-width: 1200px;
+        grid-template-columns: 1fr 6fr 1fr; 
+        grid-template-rows: auto, auto, auto, auto;
+    }
+    #global-header{
+        grid-column: 2/3;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #global-header h1{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    #searchbar{
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+
+        button{
+            margin-left: 175px;
+            margin-top: 2px;
+        }
+    main, footer{
+        grid-column: 2/3;
+    }
+    #kontaktinfo{
+        width: 35%;
+    }
+    #global-footer ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+
+    #rightbut, #leftbut{
+        padding: 10px;
+        height: 37px;
+        width: 37px;
+        border-radius: 50%;
+        position: absolute;
+        top: 57%;
+        left: 50%;
+    }
+    #leftbut{
+        left: 10px
+    }
+    #rightbut{   
+        right: 10px;    
+    }
+    #bannercard{
+        position: relative;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    #bannercard img{  
+        width: 100%;
+        max-width: 1000px;
+        max-height: 500px;
+        position: absolute;
+    }
+    #bannertext{
+        top: 25%;
+        position: absolute;
+        max-width: 331px;
+        left: 50%;
+        text-align: right;
+    }
+    #snarvei-list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 20%;
+    }
+    #fancypics{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+        max-width: 500px;
+    }
+    #kat3{
+        grid-column: 1 / 3;
+    }
 
 }
 
@@ -294,6 +432,7 @@ h2, h3, h4{
 
 } */
 main section{
+    margin-bottom: 10px;
     align-items:center;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -306,12 +445,18 @@ main section button{
 /* Seksjon 1 Hovedside */
 
 #banner{
-    background-color: #9e9090;
     text-align: right;
     display: flex;
     flex-wrap: wrap;
-    max-width: 50%;
+    margin-bottom: 100px;
     
+}
+#banner img{
+    position: relative;  
+    width: 100%;
+    max-width: 1000px;
+    max-height: 500px;
+    border-radius: 20px;
 }
 #banner a{
     color: #000000;
@@ -327,11 +472,7 @@ main section button{
     color: #ffffff;
     background-color: #000000;
 }
-#banner img{
-    width: 50%;
-    height: 50%;
 
-}
 
 
 
@@ -483,6 +624,7 @@ main section button{
 
 #fancypics img{
     width: 100%;
+    height: 100%;
     max-width: 900px;
     border-radius: 20px;
 }
@@ -623,6 +765,20 @@ main section button{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
+#prod-pic article{
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    padding: 1rem;
+}
+#prod-pic img{
+    width: 100%;
+    height: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+}
+
 #prod-det ul{
     border-top: #000000 1px solid;
 }
@@ -739,14 +895,15 @@ main section button{
     text-decoration: none;
 }
 #flex-container-ligende-prod{
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;   
+    flex-wrap: nowrap;
     justify-content: left;
-    flex-direction: row;
     gap: 10px;
-    border-bottom: #d5cfcf 0.5px solid;
-    overflow: hidden;
-    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    flex-direction: row;
+    max-width: 1200px;
 }
 
 #headerlink{
@@ -754,9 +911,9 @@ main section button{
     text-align: right;
 }
 #lignende-prod img{
-    max-width: 1200px;
-    min-width: 200px;
-    border-radius: 10px;
+    max-width: 452px;
+    border-radius: 20px;
+    max-width: 235px;
 }
 #lignende-prod{
     display: flex;
@@ -767,7 +924,7 @@ main section button{
 }
 #lignende-prod article{ 
     border-radius: 10px;
-    max-width: px;
+    max-width: 100%;
     padding: 10px;
 }
 .prod-card ul{
@@ -872,7 +1029,7 @@ main section button{
     background-color: #b1a7a7;
 }
 #infoquantity{
-    padding: 10px;
+    padding: 5px;
 }
 /* Opplysning skjema */
 #personopp{
