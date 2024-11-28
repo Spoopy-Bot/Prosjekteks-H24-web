@@ -10,7 +10,7 @@
     <div id="grid-container">
         <!-- Bruker div her for å gruppere og sentrere alt av innhold i sida-->
         <!-- Spesielt da for å gjøre et skille mellom  -->
-    <body>
+<body>
         <header id="global-header">
             <div id="searchbar">
                 <!-- Tar i bruk en div for å holde søkebaren bundet da den består av 2 deler  -->
@@ -20,9 +20,9 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="#pop-prod">Produkter</a></li> 
-                    <li><a href="index.html"><h1 id="logo">Logo</h1></a></li>
-                    <li><a href="#pop-kat">Kategorier</a></li>
+                    <li><a href="index.html#pop-prod">Produkter</a></li> 
+                    <li><a href="index.html"><h1 class="logo">Logo</h1></a></li>
+                    <li><a href="index.html#pop-kat">Kategorier</a></li>
                     <li><a href="#global-footer">Kontakt Oss</a></li>
                 </ul>
             </nav>
@@ -46,31 +46,30 @@
                 <!-- Bruker en div her for å sentrere alt av innhold i  -->
                 <section id="shopb">
                     <h3>1. Shoppingbagen din </h3>
-            <article id="checkinfo">
+            <article class="checkinfo">
                 <img src="bilder/Produkt_side/Produkt.jpg" alt="Bildet av en person som står ute med jakke og lue">
                 <!-- Bildet fra https://fastly.picsum.photos/id/669/4869/3456.jpg?hmac=g-4rQWsPdHoLi5g6ahHlvjKubSQzR-D9m7-WtblbmyM -->
                 <ul>
-                    <li id="product-name">Produktnavn</li>
+                    <li class="product-name">Produktnavn</li>
                     <li>Kr 1999</li>
                     <li>Farge: brun</li>
                     <li>
                         <p>Størrelse</p>
-                        <label for="size">
-                        <select id="infosize" name="size" id="size" required>
+                        <label>
+                        <select class="infosize" name="size" class="prodsize" required>
                             <option value="" disabled selected>XS</option>
                             <option value="small">S</option>
                             <option value="medium">M</option>
                             <option value="large">L</option>
                         </select>
                         </label>
-                        </li>
+                    </li>
 
-                        <li>
+                    <li>
                         <p>Antall</p>
-                        <label for="quantity">
-                        <input id="infoquantity" type="number" id="quantity" min="1" max="10" value="1">
+                        <label>
+                        <input class="infoquantity" type="number" min="1" max="10" value="1">
                         </label>
-                        </li>
                     </li>
                 </ul>
                 <ul>   
@@ -78,17 +77,17 @@
                     <li><i class="fa-regular fa-heart"></i></li>
                 </ul>   
         </article>
-        <article id="checkinfo">
+        <article class="checkinfo">
             <img src="bilder/Produkt_side/Produkt.jpg" alt="Bildet av en person som står ute med jakke og lue">
             <!-- Bildet fra https://fastly.picsum.photos/id/669/4869/3456.jpg?hmac=g-4rQWsPdHoLi5g6ahHlvjKubSQzR-D9m7-WtblbmyM -->
             <ul>
-                <li id="product-name">Produktnavn</li>
+                <li class="product-name">Produktnavn</li>
                 <li>Kr 1999</li>
                 <li>Farge: brun</li>
                 <li>
                     <p>Størrelse</p>
-                    <label for="size">
-                    <select id="infosize" name="size" id="size" required>
+                    <label>
+                    <select class="infosize" name="size" class="prodsize" required>
                         <option value="" disabled selected>XS</option>
                         <option value="small">S</option>
                         <option value="medium">M</option>
@@ -97,12 +96,11 @@
                     </label>
                     </li>
 
-                    <li>
+                <li>
                     <p>Antall</p>
-                    <label for="quantity">
-                    <input id="infoquantity" type="number" id="quantity" min="1" max="10" value="1">
+                    <label>
+                    <input class="infoquantity" type="number" min="1" max="10" value="1">
                     </label>
-                    </li>
                 </li>
             </ul>
             <ul>   
@@ -110,17 +108,17 @@
                 <li><i class="fa-regular fa-heart"></i></li>
             </ul>   
         </article> 
-        <article id="checkinfo">
+        <article class="checkinfo">
             <img src="bilder/Produkt_side/Produkt.jpg" alt="Bildet av en person som står ute med jakke og lue">
             <!-- Bildet fra https://fastly.picsum.photos/id/669/4869/3456.jpg?hmac=g-4rQWsPdHoLi5g6ahHlvjKubSQzR-D9m7-WtblbmyM -->
             <ul>
-                <li id="product-name">Produktnavn</li>
+                <li class="product-name">Produktnavn</li>
                 <li>Kr 1999</li>
                 <li>Farge: brun</li>
                 <li>
                     <p>Størrelse</p>
-                    <label for="size">
-                    <select id="infosize" name="size" id="size" required>
+                    <label>
+                    <select class="infosize" name="size" required>
                         <option value="" disabled selected>XS</option>
                         <option value="small">S</option>
                         <option value="medium">M</option>
@@ -129,12 +127,11 @@
                     </label>
                     </li>
 
-                    <li>
+                <li>
                     <p>Antall</p>
-                    <label for="quantity">
-                    <input id="infoquantity" type="number" id="quantity" min="1" max="10" value="1">
+                    <label>
+                    <input class="infoquantity" type="number" min="1" max="10" value="1">
                     </label>
-                    </li>
                 </li>
             </ul>
             <ul>   
@@ -166,7 +163,7 @@
 
                                     <li id="longin">
                                         <p>Adresse</p>
-                                    <label for="adresse">
+                                    <label>
                                         <input type="text" placeholder="B R A Veien 4" id="Adresse" name="Adresse" required>
                                     </label>
                                     </li>
@@ -212,7 +209,6 @@
                                     <li id="cancel-but">   
                                         <a href ="#">Avbryt</a>   
                                     </li>
-                                    </li>
                                 </ul>
                             </article>
                     </form>
@@ -223,75 +219,75 @@
                 <form onsubmit="handleSubmit(event)">
                             <h3>3. Levering</h3>
                             <h4>Velg leveringsmetode</h4>
-                            <article id="leveringalt">
-                                <label for="transport1">
-                                    <input type="radio" id="transport1" name="transport" value="valg1" required> 
+                            <article class="leveringalt">
+                                <label>
+                                    <input type="radio" name="transport" value="valg1" required> 
                                     <h4>Ekspress Hjemlevering</h4>
-                                    <p id="boldgrey">3-4 Virkedager</p>
+                                    <p class="boldgrey">3-4 Virkedager</p>
                                 </label>
                                 <p>59 kr <i class="fa-solid fa-truck"></i></p>
-                                    <p id="filltext">Bestill hverdager før 08:00 for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag
+                                    <p class="filltext">Bestill hverdager før 08:00 for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag
                                         *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, 
                                         for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.
                                     </p>
                             </article>
 
-                            <article id="leveringalt">
-                                <label for="transport1">
-                                    <input type="radio" id="transport1" name="transport" value="valg1" required> 
+                            <article class="leveringalt">
+                                <label>
+                                    <input type="radio" name="transport" value="valg1" required> 
                                     <h4>Ekspress Hjemlevering</h4>
-                                    <p id="boldgrey">1-3 Virkedager</p>
+                                    <p class="boldgrey">1-3 Virkedager</p>
                                 </label>
                                 <p>59 kr <i class="fa-solid fa-truck"></i></p>
                             </article>
 
-                            <article id="leveringalt">
-                                <label for="transport1">
-                                    <input type="radio" id="transport1" name="transport" value="valg1" required> 
+                            <article class="leveringalt">
+                                <label>
+                                    <input type="radio" name="transport" value="valg1" required> 
                                     <h4>Ekspress Hjemlevering</h4>
-                                    <p id="boldgrey">5-8 Virkedager</p>
+                                    <a class="boldgrey">5-8 Virkedager</a>
                                 </label>
                                 <p>59 kr <i class="fa-solid fa-truck"></i></p>
-                                    <p id="filltext">Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
+                                    <p class="filltext">Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
                             </article>
                 </form>
                 </section>
 
                 <section id="betaling">
-                <form onsubmit="handleSubmit(event)">
                         <h3>4. Betaling</h3>
                         <h4>Betal med kort <i class="fa-solid fa-credit-card"></i></h4>
                 <article id="cardinfo">     
+                    <form onsubmit="handleSubmit(event)">
                         <ul id="smallgrid">
                             <li id="longin2">
                                 <p>Kortnummer</p>
-                                <label for="kortnummer">
-                                    <input type="number" placeholder="342342****4435" id="kortnummer" name="kortnummer" min="1" required>
+                                <label>
+                                    <input type="number" placeholder="342342****4435" name="kortnummer" min="1" required>
                                 </label>
                             </li>
-
                             <li id="shortin2">
                                 <p>Utløpsdato</p>
-                                <label for="utlopsdato">
-                                    <input type="date" id="utlopsdato" name="utlopsdato" required >
+                                <label>
+                                    <input type="date" name="utlopsdato" required >
                                 </label>
                             </li>
                             <li id="shortin3">
                                 <p>CVC/CVV</p>
                                 <label for="cvv">
-                                    <input type="number" placeholder="CVC/CVV" id="cvv" name="cvv" required>
+                                    <input type="number" placeholder="CVC/CVV" name="cvv" required>
                                 </label>
                             </li>
                         </ul>
-                </article>
-                <article id="centerbox">
-                    <p>Å betale inkl. mva.</p>
-                    <p id="boldblack">1 199 kr</p>
-                    <button type="submit" value="Send">Fullfør kjøp</button>
+                    </article>
+                    <article id="centerbox">
+                        <p>Å betale inkl. mva.</p>
+                        <p id="boldblack">1 199 kr</p>
+                        <button type="submit" value="Send">Fullfør kjøp</button>
                         <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte og fullstendige.
                             Leverandøren forbeholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger
                             uriktige eller ufullstenige opplysninger.
                         </p>
+                    
                         <ul>
                         <li>
                             <label for="boks">
@@ -312,14 +308,14 @@
                             <p>Jeg ønsker å motta tekstmeldinger med tilbud og nyheter</p>
                         </li>
                     </ul>
-                </form>
-                </article>
-                </section>
+            </article>
+            </form>
+            </section>
             </div>
         </main>
         <footer id="global-footer">
             <section id="footerhead">
-                    <h2>Logo</h2>
+                    <a href="index.html"><h1 class="logo">Logo</h1></a>
                     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p> 
             </section>
             <section id="kontaktinfo">
@@ -335,9 +331,9 @@
             <section id="snarvei-list">
                     <h3>Snarveier</h3>
                     <ul>
-                        <li><a href="#pop-prod">Produkter</a></li>
-                        <li><a href="#pop-kat">Kategorier</a></li>
-                        <li>Kontakt oss</li>
+                        <li><a href="index.html#pop-prod">Produkter</a></li>
+                        <li><a href="index.html#pop-kat">Kategorier</a></li>
+                        <li><a href="#global-footer">Kontakt oss</a>
                         <li><a href="#"> Tilgjengelighetserklæring</a></li>
                     </ul>
             </section>

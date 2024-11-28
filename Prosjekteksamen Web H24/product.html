@@ -20,9 +20,9 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="#pop-prod">Produkter</a></li> 
-                    <li><a href="index.html"><h1 id="logo">Logo</h1></a></li>
-                    <li><a href="#pop-kat">Kategorier</a></li>
+                    <li><a href="index.html#pop-prod">Produkter</a></li> 
+                    <li><a href="index.html"><h1 class="logo">Logo</h1></a></li>
+                    <li><a href="index.html#pop-kat">Kategorier</a></li>
                     <li><a href="#global-footer">Kontakt Oss</a></li>
                 </ul>
             </nav>
@@ -75,7 +75,7 @@
                             </ul>
                                 <form id="smallform" onsubmit="handleSubmit(event)">
                                     <label for="size">
-                                        <select name="size" id="size" required>
+                                        <select name="size" class="prodsize" required>
                                             <p>Størrelse</p>
                                             <option value="" disabled selected>Velg størrelse</option>
                                             <option value="small">Small</option>
@@ -394,7 +394,7 @@
     
             <footer id="global-footer">
                 <section id="footerhead">
-                        <h2>Logo</h2>
+                        <a href="index.html"><h1 class="logo">Logo</h1></a>
                         <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p> 
                 </section>
                 <section id="kontaktinfo">
@@ -410,9 +410,9 @@
                 <section id="snarvei-list">
                         <h3>Snarveier</h3>
                         <ul>
-                            <li><a href="#pop-prod">Produkter</a></li>
-                            <li><a href="#pop-kat">Kategorier</a></li>
-                            <li>Kontakt oss</li>
+                            <li><a href="index.html#pop-prod">Produkter</a></li>
+                            <li><a href="index.html#pop-kat">Kategorier</a></li>
+                            <li><a href="#global-footer">Kontakt oss</a>
                             <li><a href="#"> Tilgjengelighetserklæring</a></li>
                         </ul>
                 </section>

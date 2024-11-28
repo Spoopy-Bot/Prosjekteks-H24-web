@@ -64,7 +64,7 @@ h2, h3, h4{
         padding: 0;
         max-width: 100%;
     }
-    #logo{
+    .logo{
         text-align: center;
         gap: 10px;
 
@@ -152,20 +152,20 @@ h2, h3, h4{
         position: relative;
         width: 100%;
     }
-    #bannercard{
+    .bannercard{
         position: relative;
         width: 100%;
         margin-bottom: 50px;
         width: 1000px;
         scroll-snap-align: start;
     }
-    #bannercard img{  
+    .bannercard img{  
         width: 100%;
         max-width: 1000px;
         max-height: 500px;
         z-index: 1;
     }
-    #bannertext{
+    .bannertext{
         top: 25%;
         position: absolute;
         max-width: 331px;
@@ -286,18 +286,18 @@ h2, h3, h4{
     #rightbut{   
         right: 10px;    
     }
-    #bannercard{
+    .bannercard{
         position: relative;
         width: 100%;
         margin-bottom: 50px;
     }
-    #bannercard img{  
+    .bannercard img{  
         width: 100%;
         max-width: 1000px;
         max-height: 500px;
         position: absolute;
     }
-    #bannertext{
+    .bannertext{
         top: 25%;
         position: absolute;
         max-width: 331px;
@@ -1002,7 +1002,7 @@ details summary::webkit-details-marker{
     text-decoration: none;
     color: #000000;
 }
-#product-name{
+.product-name{
     font-weight: bold
 }
 
@@ -1040,13 +1040,13 @@ details summary::webkit-details-marker{
 #shopb img{
     max-width: 250px;
 }
-#checkinfo {
+.checkinfo {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 }
-#checkinfo ul{
+.checkinfo ul{
     list-style: none;
     display: block;
     padding: 1rem;
@@ -1057,24 +1057,24 @@ details summary::webkit-details-marker{
     flex-direction: column;
     gap: 10px;
 }
-#checkinfo ul li{
+.checkinfo ul li{
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     gap: 10px;
 }
-#checkinfo article ul li i{
+.checkinfo article ul li i{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
-#infosize{
+.infosize{
     padding: 10px;
     border: 1px solid #000000;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #b1a7a7;
 }
-#infoquantity{
+.infoquantity{
     padding: 5px;
 }
 /* Opplysning skjema */
@@ -1105,10 +1105,12 @@ details summary::webkit-details-marker{
 #epost-grid{
     grid-column: 1/4;
     grid-row: 1/2;   
+    padding: 10px;
 }
 #tlf-grid{
     grid-column: 1/4;
     grid-row: 2/2;
+    padding: 10px;
 }
 
 #personopp label{
@@ -1152,6 +1154,7 @@ details summary::webkit-details-marker{
     gap: 10px;
     width: 100%;
     flex-direction: column;
+    padding: 10px;
 }
 #oppskjema input{
     width: 50%;
@@ -1168,26 +1171,27 @@ details summary::webkit-details-marker{
     border: #000000 1px solid;
     width: 100%;
 }
-#leveringalt{
+.leveringalt{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 10px;
+    padding: 10px;
 }
-#leveringalt label{
+.leveringalt label{
     display: flex;
     flex-wrap: wrap;
     max-width: 210px;
 }
-#leveringalt h4{
+.leveringalt h4{
     font-size: 1rem;
 }
-#boldgrey{
+.boldgrey{
     font-weight: bold;
     color: #9e9090;
     margin-block: 0px;
 }
-#filltext{
+.filltext{
     width: 100%;
 }
 
@@ -1236,6 +1240,7 @@ details summary::webkit-details-marker{
 #centerbox{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     gap: 10px;
 }
