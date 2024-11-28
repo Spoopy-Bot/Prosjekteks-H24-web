@@ -755,7 +755,6 @@ main section button{
     gap: 10px;
 }
 #pic1 img{
-    min-width: 300px;
     width: 100%;
     height: 100%;
 }
@@ -764,6 +763,8 @@ main section button{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    max-width: 700px;
+    max-height: 705px;
 }
 #prod-pic article{
     width: 100%;
@@ -778,9 +779,22 @@ main section button{
     max-width: 900px;
     border-radius: 20px;
 }
-
-#prod-det ul{
-    border-top: #000000 1px solid;
+#prod-det details summary{
+    cursor: pointer;
+}
+details summary::webkit-details-marker{
+    display: none;
+}
+.dropdown ul{
+    border-top-color: rgb(140, 130, 115);
+}
+#dropdown-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    border-top: 1px solid;
+    margin-top: 10px;
 }
 
 /* Brødsmulesti */
@@ -828,6 +842,21 @@ main section button{
     justify-content: left;
     flex-direction: column;
 }  
+#prodaside aside{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-height: 740px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#dropdown-button ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
 #smallform{
     display: flex;
     flex-wrap: wrap;
