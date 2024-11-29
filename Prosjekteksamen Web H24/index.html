@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="nb">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Hovedside</title>
-</head>
-<div id="grid-container">
-    <!-- Bruker div her for å gruppere og sentrere alt av innhold i sida-->
-    <!-- Spesielt da for å gjøre et skille mellom  -->
-<body>
-    <header id="global-header">
-        <div id="searchbar">
-            <!-- Tar i bruk en div for å holde søkebaren bundet da den består av 2 deler  -->
-            <input type="search" placeholder="søk her" id="search">
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="index.html#pop-prod">Produkter</a></li> 
-                <li><a href="index.html"><h1 class="logo">Logo</h1></a></li>
-                <li><a href="index.html#pop-kat">Kategorier</a></li>
-                <li><a href="#global-footer">Kontakt Oss</a></li>
-            </ul>
-        </nav>
-        <nav>
-            <ul>
-                <li><i class="fa-regular fa-user"></i></li>
-                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-        <main>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Hovedside</title>
+    </head>
+    <body>
+        <header id="global-header">
+            <div id="searchbar">
+                <!-- Tar i bruk en div for å holde søkebaren bundet da den består av 2 deler  -->
+                <input type="search" placeholder="søk her" class="search">
+                <button class="mag-glass-but" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="index.html#pop-prod">Produkter</a></li> 
+                    <li><a href="index.html"><h1 class="logo">Logo</h1></a></li>
+                    <li><a href="index.html#pop-kat">Kategorier</a></li>
+                    <li><a href="#global-footer">Kontakt Oss</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul> 
+                    <li><i class="fa-regular fa-user"></i></li>
+                    <li><i class="fa-regular fa-heart"></i></li>
+                    <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="indexmain">
             <section id="banner">
                 <button id="leftbut" type="submit"><i class="fa-solid fa-chevron-left"></i></button>
                 <button id="rightbut" type="submit"><i class="fa-solid fa-chevron-right"></i></button>
@@ -42,30 +39,27 @@
                     <img src="bilder/Hoved_side/Lorem-picsum-ocean.jpg" alt="Bilde av steinstrand med sjø utover horisonten">
                     <!-- Bildet fra https://fastly.picsum.photos/id/147/2448/2448.jpg?hmac=Xk6y7EeyG6VQTac1N9IhDAwLVNVeCn_KBN4nO5SRxPw -->
                 <aside class="bannertext">
-                    <!-- Tar i bruk en banner for å isolere innholdet som skal posisjoneres over bannerbildet -->
                     <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
                     <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
-                    <button type="submit"><a href="#">LES MER</a></button>
+                    <button class="bannerbut" type="submit"><i>LES MER</i></button>
                 </aside>
                 </article>
-                <article class="bannercard">
+                <article class="bannercard" id="bannercard2">
                     <img src="bilder/Hoved_side/Fisherman.jpg" alt="Bilde av en mann som fisker fra en stein på stranda">
                     <!-- Bildet fra https://fastly.picsum.photos/id/27/3264/1836.jpg?hmac=p3BVIgKKQpHhfGRRCbsi2MCAzw8mWBCayBsKxxtWO8g -->
                 <aside class="bannertext">
-                    <!-- Tar i bruk en banner for å isolere innholdet som skal posisjoneres over bannerbildet -->
                     <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
                     <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
-                    <button type="submit"><a href="#">LES MER</a></button>
+                    <button class="bannerbut" type="submit"><i>LES MER</i></button>
                 </aside>
                 </article>
-                <article class="bannercard">
+                <article class="bannercard" id="bannercard3">
                     <img src="bilder/Hoved_side/Mountians.jpg" alt="Bilde av en fjellskjede med snø og en stor dal i mellom fjellveggene">
                     <!-- Bildet fra https://fastly.picsum.photos/id/29/4000/2670.jpg?hmac=rCbRAl24FzrSzwlR5tL-Aqzyu5tX_PA95VJtnUXegGU -->
                 <aside class="bannertext">
-                    <!-- Tar i bruk en banner for å isolere innholdet som skal posisjoneres over bannerbildet -->
                     <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
                     <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus</p>
-                    <button type="submit"><a href="#">LES MER</a></button>
+                    <button class="bannerbut" type="submit"><i>LES MER</i></button>
                 </aside>
                 </article>
 
@@ -75,14 +69,14 @@
                 <article id="centercont">
                     <h2>Populære produkter</h2>
                     <p>Oppdag det beste av det beste</p>
-                    <button type="submit"><a href="#">New Product</a></button>
-                    <button type="submit"><a href="#">Special Price</a></button>
-                    <button type="submit"><a href="#">Best Sellers</a></button>
+                    <button class="pop-prod-but" type="submit"><i>New Product</i></button>
+                    <button class="pop-prod-but" type="submit"><i>Special Price</i></button>
+                    <button class="pop-prod-but" type="submit"><i>Best Sellers</i></button>
                 </article>
                         <article class="prod-card">
                             <a href="product.html"><img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese"></a>
                             <!-- Bildet fra https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI -->
-                            <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></button>
+                            <button class="heartbut" type="submit"><i class="fa-regular fa-heart"></i></button>
                             <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -97,7 +91,7 @@
                         <article class="prod-card">
                             <a href="product.html"><img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese"></a>
                             <!-- Bildet fra https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI -->
-                            <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></button>
+                            <button class="heartbut" type="submit"><i class="fa-regular fa-heart"></i></button>
                             <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -112,7 +106,7 @@
                         <article class="prod-card">
                             <a href="product.html"><img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese"></a>
                             <!-- Bildet fra https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI -->
-                            <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></button>
+                            <button class="heartbut" type="submit"><i class="fa-regular fa-heart"></i></button>
                             <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -127,7 +121,7 @@
                         <article class="prod-card">
                             <a href="product.html"><img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese"></a>
                             <!-- Bildet fra https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI -->
-                            <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></button>
+                            <button class="heartbut" type="submit"><i class="fa-regular fa-heart"></i></button>
                             <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -142,7 +136,7 @@
                         <article class="prod-card">
                             <a href="product.html"><img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese"></a>
                             <!-- Bildet fra https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI -->
-                            <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></button>
+                            <button class="heartbut" type="submit"><i class="fa-regular fa-heart"></i></button>
                             <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -157,7 +151,7 @@
                         <article class="prod-card">
                             <a href="product.html"><img src="bilder/Hoved_side/Lorem-picsum-cat.jpg" alt="Bilde av katt nese"></a>
                             <!-- Bildet fra https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI -->
-                            <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></button>
+                            <button class="heartbut" type="submit"><i class="fa-regular fa-heart"></i></button>
                             <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -314,7 +308,7 @@
                         <li><a href="index.html#pop-prod">Produkter</a></li>
                         <li><a href="index.html#pop-kat">Kategorier</a></li>
                         <li><a href="#global-footer">Kontakt oss</a>
-                        <li><a href="#"> Tilgjengelighetserklæring</a></li>
+                        <li><a href="Tilgjengelighetserklæring/Tilgjengelighetserklæring.pdf" target="_blank"> Tilgjengelighetserklæring</a></li>
                     </ul>
             </section>
             <section>
@@ -328,6 +322,5 @@
 
             </section>
         </footer>
-        </div>
 </body>
 </html>

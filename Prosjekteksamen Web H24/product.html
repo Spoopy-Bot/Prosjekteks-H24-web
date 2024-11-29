@@ -7,15 +7,12 @@
         <link rel="stylesheet" href="css/style.css">
         <title>Produktside</title>
     </head>
-    <div id="grid-container">
-        <!-- Bruker div her for å gruppere og sentrere alt av innhold i sida-->
-        <!-- Spesielt da for å gjøre et skille mellom  -->
     <body>
         <header id="global-header">
             <div id="searchbar">
                 <!-- Tar i bruk en div for å holde søkebaren bundet da den består av 2 deler  -->
-                <input type="search" placeholder="søk her" id="search">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="search" placeholder="søk her" class="search">
+                <button class="mag-glass-but" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <nav>
                 <ul>
@@ -34,7 +31,7 @@
                 </ul>
             </nav>
         </header>
-            <main id="main-content">
+        <main>
                 <nav id="breadcrumbs">
                     <ul>
                         <li><a href="index.html">Hjem</a></li> 
@@ -64,7 +61,7 @@
                     </article>
                 </section>
                 <section id="prodaside">
-                    <aside>
+                    <aside id="prod-det">
                         <article>
                             <h3>Produktnavn</h3>
                             <p><a href="#">MERKENAVN</a></p>
@@ -75,8 +72,7 @@
                             </ul>
                                 <form id="smallform" onsubmit="handleSubmit(event)">
                                     <label for="size">
-                                        <select name="size" class="prodsize" required>
-                                            <p>Størrelse</p>
+                                        <select id="size" name="size" class="prodsize" required>
                                             <option value="" disabled selected>Velg størrelse</option>
                                             <option value="small">Small</option>
                                             <option value="medium">Medium</option>
@@ -87,193 +83,177 @@
                                         <button id="but2" type="submit"><i class="fa-regular fa-heart"></i></button>
                                 </form>
                         </article>
-                        <article id="prod-det">
                             <details>
-                                <summary id="dropdown-button">
+                                <summary class="dropdown-button">
                                     <h4>Materiale og vedlikehold</h4>
-                                    <ul class="dropdown">
-                                        <li><i class="fa-solid fa-plus"></i></li>
-                                    </ul>
+                                    <h5 class="dropdown">
+                                    <i class="fa-solid fa-plus"></i>
+                                    </h5>
+                                    
                                 </summary>
-                        <p>
                             <ul>
                                 <li>Overmateriale: 95% viskose, 5% elastan</li>
                                 <li>Materiale ermer : 100%polyester</li>
                                 <li>Materiale: Jersey</li>
                             </ul>
-                        </p>
                          </details>
-
-                    <details>
-                        <summary id="dropdown-button">
+                        <details>
+                        <summary class="dropdown-button">
                             <h4>Produktdetaljer</h4>
-                            <ul class="dropdown">
-                                <li><i class="fa-solid fa-plus"></i></li>
-                            </ul>
+                                    <h5 class="dropdown">
+                                    <i class="fa-solid fa-plus"></i>
+                                    </h5>
                         </summary>
-                    <p>
                         <ul>
                             <li>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, 
                                 international pavilions, award-winning fireworks & seasonal special events.</li>
                         </ul>
-                    </p>
-                     </details>
-
-                <details>
-                    <summary id="dropdown-button">
+                        </details>
+                        <details>
+                        <summary class="dropdown-button">
                         <h4>Størrelsetabell</h4>
-                        <ul class="dropdown">
-                            <li><i class="fa-solid fa-plus"></i></li>
-                        </ul>
-                    </summary>
-                <p>
-                <ul>
-                    <li>
-                    <table>
-                        <tr>
-                            <th>EU</th>
-                            <th>INT</th>
-                            <th>BRYSTVIDDE</th>
-                            <th>LIVVIDDE</th>
-                            <th>Hoftemål</th>
-                        </tr>
-                        <tr>
-                            <td>34</td>
-                            <td>XXS</td>
-                            <td>90</td>
-                            <td>60</td>
-                            <td>90</td>
-                        </tr>
-                        <tr>
-                            <td>36</td>
-                            <td>XS</td>
-                            <td>94</td>
-                            <td>64</td>
-                            <td>94</td>
-                        </tr>
-                        <tr>
-                            <td>38</td>
-                            <td>S</td>
-                            <td>98</td>
-                            <td>68</td>
-                            <td>98</td>
-                        </tr>
-                        <tr>
-                            <td>40</td>
-                            <td>M</td>
-                            <td>102</td>
-                            <td>72</td>
-                            <td>102</td>
-                        </tr>
-                        <tr>
-                            <td>42</td>
-                            <td>L</td>
-                            <td>106</td>
-                            <td>76</td>
-                            <td>106</td>
-                        </tr>
-                        <tr>
-                            <td>44</td>
-                            <td>XL</td>
-                            <td>110</td>
-                            <td>80</td>
-                            <td>110</td>
-                        </tr>
-                        <tr>
-                            <td>46</td>
-                            <td>XXL</td>
-                            <td>114</td>
-                            <td>84</td>
-                            <td>114</td>
-                        </tr>
-                        <tr>
-                            <td>48</td>
-                            <td>3XL</td>
-                            <td>118</td>
-                            <td>88</td>
-                            <td>118</td>
-                        </tr>
-                        <tr>
-                            <td>50</td>
-                            <td>4XL</td>
-                            <td>122</td>
-                            <td>92</td>
-                            <td>122</td>
-                        </tr>
-                        <tr>
-                            <td>52</td>
-                            <td>5XL</td>
-                            <td>126</td>
-                            <td>96</td>
-                            <td>126</td>
-                        </tr>
-                        <tr>
-                            <td>54</td>
-                            <td>6XL</td>
-                            <td>130</td>
-                            <td>100</td>
-                            <td>130</td>
-                        </tr>
-                        <tr>
-                            <td>56</td>
-                            <td>7XL</td>
-                            <td>134</td>
-                            <td>104</td>
-                            <td>134</td>
-                        </tr>
-                        <tr>
-                            <td>58</td>
-                            <td>8XL</td>
-                            <td>138</td>
-                            <td>108</td>
-                            <td>138</td>
-                        </tr>
-                        <tr>
+                                    <h5 class="dropdown">
+                                    <i class="fa-solid fa-plus"></i>
+                                    </h5>
+                        </summary>
+                        <table>
+                            <tr>
+                                <th>EU</th>
+                                <th>INT</th>
+                                <th>BRYSTVIDDE</th>
+                                <th>LIVVIDDE</th>
+                                <th>Hoftemål</th>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>XXS</td>
+                                <td>90</td>
+                                <td>60</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>XS</td>
+                                <td>94</td>
+                                <td>64</td>
+                                <td>94</td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td>S</td>
+                                <td>98</td>
+                                <td>68</td>
+                                <td>98</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>M</td>
+                                <td>102</td>
+                                <td>72</td>
+                                <td>102</td>
+                            </tr>
+                            <tr>
+                                <td>42</td>
+                                <td>L</td>
+                                <td>106</td>
+                                <td>76</td>
+                                <td>106</td>
+                            </tr>
+                            <tr>
+                                <td>44</td>
+                                <td>XL</td>
+                                <td>110</td>
+                                <td>80</td>
+                                <td>110</td>
+                            </tr>
+                            <tr>
+                                <td>46</td>
+                                <td>XXL</td>
+                                <td>114</td>
+                                <td>84</td>
+                                <td>114</td>
+                            </tr>
+                            <tr>
+                                <td>48</td>
+                                <td>3XL</td>
+                                <td>118</td>
+                                <td>88</td>
+                                <td>118</td>
+                            </tr>
+                            <tr>
+                                <td>50</td>
+                                <td>4XL</td>
+                                <td>122</td>
+                                <td>92</td>
+                                <td>122</td>
+                            </tr>
+                            <tr>
+                                <td>52</td>
+                                <td>5XL</td>
+                                <td>126</td>
+                                <td>96</td>
+                                <td>126</td>
+                            </tr>
+                            <tr>
+                                <td>54</td>
+                                <td>6XL</td>
+                                <td>130</td>
+                                <td>100</td>
+                                <td>130</td>
+                            </tr>
+                            <tr>
+                                <td>56</td>
+                                <td>7XL</td>
+                                <td>134</td>
+                                <td>104</td>
+                                <td>134</td>
+                            </tr>
+                            <tr>
+                                <td>58</td>
+                                <td>8XL</td>
+                                <td>138</td>
+                                <td>108</td>
+                                <td>138</td>
+                            </tr>
+                            <tr>
                             <td>60</td>
                             <td>9XL</td>
                             <td>142</td>
                             <td>112</td>
                             <td>142</td>
-                        </tr>
-                        <tr>
+                            </tr>
+                            <tr>
                             <td>62</td>
                             <td>10XL</td>
                             <td>146</td>
                             <td>116</td>
                             <td>146</td>
-                        </tr>
-                    </li>
-                </ul>
-                    </table>
-                </p>
-                 </details>
-                 <details>
-                    <summary id="dropdown-button">
-                        <h4>Anmeldelser</h4>
-                        <ul class="dropdown">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li>32</li>
-                        </ul>
-                    </summary>
-                    <p>
-                        <ul>
-                            <li>Robert Labrador</li>
-                            <li>2021-10-12</li>
-                            <ul class="rating">
+                            </tr>
+                        </table>
+                        </details>
+                        <details>
+                        <summary class="dropdown-button">
+                        <h4>Materiale og vedlikehold</h4>
+                                    <h5 class="dropdown">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        32
+                                    </h5>
+                        </summary>
+                            <p>Robert Labrador</p>
+                            <p>2021-10-12</p>
+                        <ul class="rating">
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-solid fa-star"></i></li>
                                 <li><i class="fa-regular fa-star"></i></li>
                                 <li><i class="fa-regular fa-star"></i></li>
-                            </ul>
                             <li>Nam libero tempore, cum soluta nobis est eligendi optio comque nihil impedit quo id quod.</li>
                         </ul>
-                    </p>
-                        </article>
+                        </details>
                     </aside>
                 </section>
                 </div>
@@ -285,7 +265,7 @@
                     <article class="prod-card">
                         <a href="product.html"><img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene"></a>
                         <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
-                        <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></i></button>
+                        <button class="heartbut" type="submit"><i class="fa-regular fa-heart"></i></button>
                         <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -300,22 +280,22 @@
                     <article class="prod-card">
                         <a href="product.html"><img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene"></a>
                         <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
-                        <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></i></button>
+                        <button class="heartbut" type="submit"><i class="fa-regular fa-heart"></i></button>
                         <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                         <p>Kr 1999</p>
-                        <ul class="rating">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-regular fa-star"></i></li>
-                            <li>842 Reviews</li>
-                        </ul>
+                            <ul class="rating">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li>842 Reviews</li>
+                            </ul>
                     </article>
                     <article class="prod-card">
                         <a href="product.html"><img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene"></a>
                         <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
-                        <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></i></button>
+                        <button class="heartbut" type="submit"><i class="fa-regular fa-heart"></i></button>
                         <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -330,7 +310,7 @@
                     <article class="prod-card">
                         <a href="product.html"><img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene"></a>
                         <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
-                        <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></i></button>
+                        <button class="heartbut" type="submit"><i class="fa-regular fa-heart"></i></button>
                         <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -345,7 +325,7 @@
                     <article class="prod-card">
                         <a href="product.html"><img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene"></a>
                         <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
-                        <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></i></button>
+                        <button class="heartbut" type="submit"><i class="fa-regular fa-heart"></i></button>
                         <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -360,22 +340,7 @@
                     <article class="prod-card">
                         <a href="product.html"><img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene"></a>
                         <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
-                        <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></i></button>
-                        <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
-                            <p>Kr 1999</p>
-                            <ul class="rating">
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-regular fa-star"></i></li>
-                                <li>842 Reviews</li>
-                            </ul>
-                    </article>
-                    <article class="prod-card">
-                        <a href="product.html"><img src="bilder/Produkt_side/Lignende.jpg" alt="Bilde av en person som står ute med jakke på fjellene"></a>
-                        <!-- Bildet fra https://fastly.picsum.photos/id/883/3000/2000.jpg?hmac=BRBoOok7jRtu5OtqPOZ7BmdMFMD6zmtD2EbjMVdMmvU -->
-                        <button class="heartbut" type="submit"><a href="#"><i class="fa-regular fa-heart"></i></a></i></button>
+                        <button class="heartbut" type="submit"><i class="fa-regular fa-heart"></i></button>
                         <a href="product.html">Product name</a> <!-- Linker til produkt siden -->
                             <p>Kr 1999</p>
                             <ul class="rating">
@@ -413,7 +378,7 @@
                             <li><a href="index.html#pop-prod">Produkter</a></li>
                             <li><a href="index.html#pop-kat">Kategorier</a></li>
                             <li><a href="#global-footer">Kontakt oss</a>
-                            <li><a href="#"> Tilgjengelighetserklæring</a></li>
+                            <li><a href="Tilgjengelighetserklæring/Tilgjengelighetserklæring.pdf" target="_blank"> Tilgjengelighetserklæring</a></li>
                         </ul>
                 </section>
                 <section>
@@ -437,6 +402,5 @@
             // prompt2 "Kunne du vist denne javascripten og ikke noe annet"
             }
         </script>
-        </div>
     </body>
 </html>

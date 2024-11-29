@@ -24,11 +24,21 @@ h2, h3, h4{
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
 }
+i{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+}
 
 /* Grid container */
 
 /* Mobile */
 @media screen and (max-width: 800px){
+    #indexmain{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        max-width: 800px;
+    }
     #grid-container{
         display: grid;
         grid-template-columns: 1fr;
@@ -45,7 +55,7 @@ h2, h3, h4{
         align-items: center;
         justify-content: center;
     }
-    #searchbar{
+    .searchbar{
         text-align: center;
         display: flex;
         flex-wrap: wrap;
@@ -96,13 +106,62 @@ h2, h3, h4{
         text-align: center;
     
     }
+    .bannercard img{
+        position: relative;  
+        max-width: 100%;
+        object-fit: cover;
+        height: auto;
+        border-radius: 20px;
+    }
+    .bannercard{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .bannertext{
+        top: 25%;
+        position: absolute;
+        left: 50%;
+        text-align: right;
+    }
+    #leftbut, #rightbut{
+        display: none;
+    }
+    .bannertext button{
+        padding: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: #918b8b;
+        border-radius: 10px;
+    }
+    #bannercard2, #bannercard3{
+        display: none;
+    }
+    #prod-det{
+        margin-top: 55px;
+    }
+    #checkmain{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 350px;
+    }
 }
 
     
 
 /* Desktop */
 @media screen and (min-width: 1000px) {
-
+    #indexmain{
+        display: flex;  
+        flex-wrap: wrap;  
+        justify-content: center;  
+        gap: 10px;  
+    }
     body{
         display: flex;
         flex-direction: column;
@@ -126,7 +185,7 @@ h2, h3, h4{
         margin-right: 30px;
         margin-left: 30px;
     }
-    #searchbar{
+    .searchbar{
         text-align: center;
         display: flex;
         flex-wrap: wrap;
@@ -147,6 +206,166 @@ h2, h3, h4{
             display: flex;
             flex-wrap: wrap;
             justify-content: left;
+    }
+    #banner img{
+        position: relative;  
+        width: 100%;
+        max-width: 1000px;
+        max-height: 500px;
+        border-radius: 20px;
+        min-width: 1000px;
+    }
+    #banner{
+        position: relative;
+        width: 100%;
+    }
+    .bannercard{
+        position: relative;
+        width: 100%;
+        margin-bottom: 50px;
+        width: 1000px;
+        scroll-snap-align: start;
+    }
+    .bannercard img{  
+        width: 100%;
+        max-width: 1000px;
+        max-height: 500px;
+        z-index: 1;
+    }
+    .bannertext{
+        top: 25%;
+        position: absolute;
+        max-width: 331px;
+        left: 50%;
+        text-align: right;
+        z-index: 2;
+    }
+    #bannercard2 .bannertext{
+        left: 8%;
+        text-align: left;
+    }
+    #bannercard3 .bannertext{
+        left: 34%;
+        text-align: center;
+    }
+    #rightbut, #leftbut{
+        padding: 10px;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: rgba(226, 224, 224, 0.5);
+        top: 50%;
+        z-index: 3;
+        cursor: pointer;
+    }
+    #leftbut{
+        left: 9%;
+        top: 34%;
+    }
+    #rightbut{   
+        top: 34%;
+        left: 87%;
+    }
+    .bannerbut{
+        padding: 10px;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+    .bannerbut i{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+    }
+    #snarvei-list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 20%;
+    }
+    #fancypics{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    #kat3{
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+    }
+    #kat4{
+        grid-column: 1 / 3;
+        grid-row: 2 / 4;
+    }
+    #fancypics article{
+        display: grid;
+        align-items: end;
+    }
+    #grid-container-produktinfo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+    
+
+
+/*  Samme som desktop, bortsett fra #fancypics */
+/* Tablet grid i hovedsiden */
+@media screen and (min-width:800px) and (max-width: 1000px) {
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #grid-container{
+        display: grid;
+        max-width: 1200px;
+        grid-template-columns: 1fr 6fr 1fr; 
+        grid-template-rows: auto, auto, auto, auto;
+    }
+    #global-header{
+        grid-column: 2/3;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #global-header h1{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    .searchbar{
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+
+        button{
+            margin-left: 175px;
+            margin-top: 2px;
+        }
+    main, footer{
+        grid-column: 2/3;
+    }
+    #kontaktinfo{
+        width: 35%;
+    }
+    #global-footer ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+    }
+    #banner img{
+        position: relative;  
+        width: 100%;
+        max-width: 1000px;
+        max-height: 500px;
+        border-radius: 20px;
+        min-width: 1000px;
     }
     #banner{
         position: relative;
@@ -178,7 +397,7 @@ h2, h3, h4{
         height: 48px;
         width: 48px;
         border-radius: 50%;
-        position: fixed;
+        position: absolute;
         background-color: rgba(226, 224, 224, 0.5);
         top: 50%;
         z-index: 3;
@@ -192,117 +411,16 @@ h2, h3, h4{
         top: 34%;
         left: 87%;
     }
-    
-}
-
-    #snarvei-list{
-        display: flex;
-        flex-wrap: wrap;
-        width: 20%;
-    }
-    #fancypics{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 10px;
-    }
-    #kat3{
-        grid-column: 3 / 4;
-        grid-row: 1 / 3;
-    }
-    #kat4{
-        grid-column: 1 / 3;
-        grid-row: 2 / 4;
-    }
-    #fancypics article{
-        display: grid;
-        align-items: end;
-    }
-
-    
-
-
-/*  Samme som desktop, bortsett fra #fancypics */
-/* Tablet grid i hovedsiden */
-@media screen and (min-width:800px) and (max-width: 1000px) {
-    body{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #grid-container{
-        display: grid;
-        max-width: 1200px;
-        grid-template-columns: 1fr 6fr 1fr; 
-        grid-template-rows: auto, auto, auto, auto;
-    }
-    #global-header{
-        grid-column: 2/3;
-        flex-wrap: wrap;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    #global-header h1{
-        margin-right: 30px;
-        margin-left: 30px;
-    }
-    #searchbar{
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }   
-
-        button{
-            margin-left: 175px;
-            margin-top: 2px;
-        }
-    main, footer{
-        grid-column: 2/3;
-    }
-    #kontaktinfo{
-        width: 35%;
-    }
-    #global-footer ul{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: left;
-        }
-
-    #rightbut, #leftbut{
+    .bannerbut{
         padding: 10px;
-        height: 37px;
-        width: 37px;
-        border-radius: 50%;
-        position: absolute;
-        top: 57%;
-        left: 50%;
+        cursor: pointer;
+        font-weight: bold;
+        background-color: #fff;
+        border-radius: 10px;
     }
-    #leftbut{
-        left: 10px
-    }
-    #rightbut{   
-        right: 10px;    
-    }
-    .bannercard{
-        position: relative;
-        width: 100%;
-        margin-bottom: 50px;
-    }
-    .bannercard img{  
-        width: 100%;
-        max-width: 1000px;
-        max-height: 500px;
-        position: absolute;
-    }
-    .bannertext{
-        top: 25%;
-        position: absolute;
-        max-width: 331px;
-        left: 50%;
-        text-align: right;
+    .bannerbut i{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
     }
     #snarvei-list{
         display: flex;
@@ -317,10 +435,18 @@ h2, h3, h4{
         max-width: 500px;
     }
     #kat3{
-        grid-column: 1 / 3;
+        grid-column: 1 / 4;
     }
-
+    #grid-container-produktinfo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
 }
+    #fancypics article{
+        display: grid;
+        align-items: end;
+    }
 
 
 
@@ -341,13 +467,15 @@ h2, h3, h4{
     position: relative;
     left: 10px;
 }
-#global-header button{
+.mag-glass-but{
     padding: 10px;
     border: none;
     cursor: pointer;
     border-radius: 0 10px 10px 0;
     background-color: #fff;
     position: absolute;
+    right: -4%;
+    top: 0%;
 }
 #global-header ul{
     gap: 10px;
@@ -355,7 +483,9 @@ h2, h3, h4{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
+#searchbar{
+    position: relative;
+}
 #global-header a{
     color: #000000;
     text-decoration: none;
@@ -455,7 +585,14 @@ main section button{
 
 
 /* Seksjon 1 Hovedside */
+#gridmain{
+    display: flex;  
+    flex-wrap: wrap;  
+    justify-content: center;  
+    gap: 10px;  
+    flex-direction: column;
 
+}
 #banner{
     flex-direction: row;
     display: flex;
@@ -465,15 +602,6 @@ main section button{
     overflow-y: hidden;
     max-width: 1000px;
     gap: 10px;
-}
-
-#banner img{
-    position: relative;  
-    width: 100%;
-    max-width: 1000px;
-    max-height: 500px;
-    border-radius: 20px;
-    min-width: 1000px;
 }
 #banner a{
     color: #000000;
@@ -523,6 +651,7 @@ main section button{
 .prod-card{
     border-radius: 10px;
     max-width: 245px;
+    min-width: 240px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -538,6 +667,11 @@ main section button{
     background-color: rgba(0, 0, 0, 0.25);
     padding: 5px;
     left: 188px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.heartbut:hover{
+    background-color: rgb(224, 19, 19);
 }
 .rating{
     list-style: none;
@@ -573,6 +707,20 @@ main section button{
     width: 100%;
     max-width: 400px;
     border-radius: 20px;
+}
+.pop-prod-but{
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.pop-prod-but:hover{
+    background-color: #5a5454;
+    color: #ffffff;
+}
+.pop-prod-but i{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: normal;
 }
 #centercont a{
     color: #000000;
@@ -750,13 +898,6 @@ main section button{
 
 
 /* Produktside */
-
-
-#grid-container-produktinfo{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-}
 #grid-container-produktinfo img{
     width: 650px;
     max-width: 160px;
@@ -805,7 +946,7 @@ details summary::webkit-details-marker{
 .dropdown ul{
     border-top-color: rgb(140, 130, 115);
 }
-#dropdown-button{
+.dropdown-button{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -815,11 +956,6 @@ details summary::webkit-details-marker{
 }
 
 /* Brødsmulesti */
-#main-content{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 #breadcrumbs ul{
     display: flex;
     flex-wrap: wrap;
@@ -867,7 +1003,7 @@ details summary::webkit-details-marker{
     overflow-x: hidden;
     overflow-y: auto;
 }
-#dropdown-button ul{
+.dropdown-button ul{
     list-style: none;
     padding: 0;
     display: flex;
@@ -883,6 +1019,13 @@ details summary::webkit-details-marker{
 #smallform label{
     width: 100%;
 }
+#size{
+    cursor: pointer;
+}
+#size:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
 #smallform select{
     padding: 10px;
     border: 1px solid #000000;
@@ -895,10 +1038,18 @@ details summary::webkit-details-marker{
     color: #fff;
     width: 70%;
 }
+#but1:hover{
+    background-color: #fff;
+    color: #000000;
+}
 #but2{
     background-color:#fff;
     color: #000000;
     width: 20%;
+}
+#but2:hover{
+    background-color: #000000;
+    color: #fff;
 }
 #prodaside a{
     color: #000000;
@@ -1045,6 +1196,7 @@ details summary::webkit-details-marker{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
 }
 .checkinfo ul{
     list-style: none;
@@ -1136,6 +1288,9 @@ details summary::webkit-details-marker{
 #shortin{
     align-content: end;
 }
+#login{
+    grid-column: 1/3;
+}
 #save-but{
     grid-column: 1/4;
     grid-row: 3/4;
@@ -1182,6 +1337,10 @@ details summary::webkit-details-marker{
     display: flex;
     flex-wrap: wrap;
     max-width: 210px;
+}
+.leveringalt label span{
+    align-content: center;
+    gap: 10px;
 }
 .leveringalt h4{
     font-size: 1rem;
